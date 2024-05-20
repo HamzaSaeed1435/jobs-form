@@ -201,13 +201,14 @@
                 cpr: document.getElementById('cpr').value
             };
 
-            fetch('https//dev.contactivity.io/send-email', { // Change this URL to your deployed endpoint
+            fetch('https://dev.contactivity.io/send-email', { // Change this URL to your deployed endpoint
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(formData)
             })
+
             .then(response => {
                 if (response.ok) {
                     document.getElementById('successPopup').style.display = 'block';
